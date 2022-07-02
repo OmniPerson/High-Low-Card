@@ -1,31 +1,27 @@
-﻿
-while (true){
+﻿using Game;
 
-int FirstCard = new Random().Next(1, 14);
-Console.WriteLine(FirstCard);
+Console.WriteLine("Choose an username");
+var Name = Console.ReadLine();
+Console.WriteLine("Welcome "+ Name);
+var deck = new Deck();
+
+while (true){
+deck.PickCards();
+
+Console.WriteLine(deck.ShowCard(deck.Firstcard));
 
 Console.WriteLine("Higher(h) or lower(l)?");
 string?  Option = Console.ReadLine();
 
-int NextCard = new Random().Next (1,14);
-Console.WriteLine(NextCard);
+Console.WriteLine(deck.ShowCard(deck.Secondcard));
 if (Option == null){
     Console.WriteLine ("You Lost");
     return;
 }
-if (Option.Equals("h")){
-    if(NextCard >= FirstCard){
-        Console.WriteLine("You Won");
-    
-    }
-    else{ Console.WriteLine("You Lost");}
-}
-else {
-    if(NextCard<= FirstCard){
-        Console.WriteLine ("You Won");
-        
-    }
-    else {Console.WriteLine("You lost");}
-}
+if (deck.CheckIfOptionIsRight(Option.Equals("h"))){
+    Console.WriteLine ("You Won");
 
 }
+else Console.WriteLine ("You lost");
+}
+
