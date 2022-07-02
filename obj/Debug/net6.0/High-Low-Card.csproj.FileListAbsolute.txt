@@ -1,0 +1,15 @@
+C:\Proiecte\High-Low-Card\bin\Debug\net6.0\High-Low-Card.exe
+C:\Proiecte\High-Low-Card\bin\Debug\net6.0\High-Low-Card.deps.json
+C:\Proiecte\High-Low-Card\bin\Debug\net6.0\High-Low-Card.runtimeconfig.json
+C:\Proiecte\High-Low-Card\bin\Debug\net6.0\High-Low-Card.dll
+C:\Proiecte\High-Low-Card\bin\Debug\net6.0\High-Low-Card.pdb
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.csproj.AssemblyReference.cache
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.AssemblyInfoInputs.cache
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.AssemblyInfo.cs
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.csproj.CoreCompileInputs.cache
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.dll
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\refint\High-Low-Card.dll
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.pdb
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\High-Low-Card.genruntimeconfig.cache
+C:\Proiecte\High-Low-Card\obj\Debug\net6.0\ref\High-Low-Card.dll
