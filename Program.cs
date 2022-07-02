@@ -1,4 +1,6 @@
 ﻿
+while (true){
+
 int FirstCard = new Random().Next(1, 14);
 Console.WriteLine(FirstCard);
 
@@ -20,9 +22,10 @@ if (Option.Equals("h")){
 }
 else {
     if(NextCard<= FirstCard){
-        Console.WriteLine ("YouWon");
+        Console.WriteLine ("You Won");
         
     }
     else {Console.WriteLine("You lost");}
 }
 
+}
