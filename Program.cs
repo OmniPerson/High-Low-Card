@@ -4,7 +4,7 @@ Console.WriteLine("Choose an username");
 var Name = Console.ReadLine();
 Console.WriteLine("Welcome "+ Name);
 var deck = new Deck();
-
+var Round = 0;
 while (true){
 deck.PickCards();
 
@@ -23,5 +23,7 @@ if (deck.CheckIfOptionIsRight(Option.Equals("h"))){
 
 }
 else Console.WriteLine ("You lost");
+Round++;
+Console.WriteLine("Round " + Round + " Over");
 }
 
