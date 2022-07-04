@@ -4,10 +4,11 @@ Console.WriteLine("Choose an username");
 var Name = Console.ReadLine();
 Console.WriteLine("Welcome "+ Name);
 var deck = new Deck();
+var Wallet = new Wallet(500);
 var Round = 0;
 while (true){
 deck.PickCards();
-
+Console.WriteLine("Your current balance is " + Wallet);
 Console.WriteLine(deck.ShowCard(deck.Firstcard));
 
 Console.WriteLine("Higher(h) or lower(l)?");
