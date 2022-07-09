@@ -1,30 +1,34 @@
 ﻿using Game;
-
+using Core;
 Console.WriteLine("Choose an username");
 var Name = Console.ReadLine();
-Console.WriteLine("Welcome "+ Name);
+Console.WriteLine("Welcome " + Name);
+var engine = new Engine();
 var deck = new Deck();
 var Wallet = new Wallet(500);
-var Round = 0;
-while (true){
-deck.PickCards();
-Console.WriteLine("Your current balance is " + Wallet);
-Console.WriteLine(deck.ShowCard(deck.Firstcard));
 
-Console.WriteLine("Higher(h) or lower(l)?");
-string?  Option = Console.ReadLine();
+while (engine.IsRunning)
+{
+    deck.PickCards();
+    Console.WriteLine("Your current balance is " + Wallet);
+    Console.WriteLine(deck.ShowCard(deck.Firstcard));
 
-Console.WriteLine(deck.ShowCard(deck.Secondcard));
-if (Option == null){
-    Console.WriteLine ("You Lost");
-    return;
-}
-if (deck.CheckIfOptionIsRight(Option.Equals("h"))){
-    Console.WriteLine ("You Won");
+    Console.WriteLine("Higher(h) or lower(l)?");
+    string? Option = Console.ReadLine();
+    OptionType optionType = Option == "h" ? OptionType.High : OptionType.Low;
+    
+    
+    Console.WriteLine(deck.ShowCard(deck.Secondcard));
+    if (Option == null)
+    {
+        Console.WriteLine("You Lost");
+        return;
+    }
+    
+    string message = deck.CheckIfOptionIsRight(Option.Equals("h")) ? "You Won" : "You Lost";
+    Console.WriteLine(message);
 
-}
-else Console.WriteLine ("You lost");
-Round++;
-Console.WriteLine("Round " + Round + " Over");
+    engine.NextRound();
+    Console.WriteLine("Round " + engine.Round + " Over");
 }
 
