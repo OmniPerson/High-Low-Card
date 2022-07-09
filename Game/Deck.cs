@@ -19,9 +19,9 @@ public string ShowCard(int number) {
         return number.ToString();
     }
 }
-public bool CheckIfOptionIsRight( bool optionIsHigher){
+public bool CheckIfOptionIsRight( OptionType optionType){
 
-if (optionIsHigher){
+if (optionType== OptionType.High){
     return Secondcard> Firstcard;
 
 }
