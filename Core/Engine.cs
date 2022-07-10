@@ -27,7 +27,10 @@ namespace Core
         public void NextRound()
         {
             Round++;
+            Console.WriteLine("Round " + Round + " Over");
+            Bet.Reset();
         }
+
         public void Run()
         {
             while (IsRunning)
@@ -57,7 +60,7 @@ namespace Core
                         continue;
 
                 }
-
+                RiseSection();
                 Console.WriteLine(Deck.ShowCard(Deck.Secondcard));
 
                 bool hasWon = Deck.CheckIfOptionIsRight(optionType);
@@ -79,9 +82,33 @@ namespace Core
                     continue;
                 }
                 NextRound();
-                Console.WriteLine("Round " + Round + " Over");
+                
             }
 
+
+        }
+        private void RiseSection()
+        {
+            Console.WriteLine("Do you want to rise? (Y/n) ");
+            string? option = Console.ReadLine();
+            if (option == "n")
+            {
+                return;
+
+
+            }
+            int amount;
+            do
+            {
+                Console.WriteLine("With how much do you wanna rise?");
+                option = Console.ReadLine();
+                amount = option != null ? Int32.Parse(option) : 0;
+                if (Player.Wallet.Lesser(Bet.CurrentAmount + amount))
+                {
+                    Console.WriteLine("You don't have enough enough money to bet.");
+                }
+            } while (Player.Wallet.Lesser(Bet.CurrentAmount + amount));
+            Bet.Rise(amount);
 
         }
     }
