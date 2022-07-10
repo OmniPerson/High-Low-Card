@@ -33,17 +33,30 @@ namespace Core
                 Console.WriteLine(Player);
                 Console.WriteLine(Deck.ShowCard(Deck.Firstcard));
 
-                Console.WriteLine("Higher(h) or lower(l)?");
+                Console.WriteLine("Higher(h), lower(l) or equal(e)?");
                 string? Option = Console.ReadLine();
-                OptionType optionType = Option == "h" ? OptionType.High : OptionType.Low;
+                OptionType optionType;
 
+                switch (Option)
+                {
+                    case "h":
+                        optionType = OptionType.High;
+                        break;
+                    case "l":
+                        optionType = OptionType.Low;
+                        break;
+                    case "e":
+                        optionType = OptionType.Equal;
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid Option");
+                        continue;
+
+                }
 
                 Console.WriteLine(Deck.ShowCard(Deck.Secondcard));
-                if (Option == null)
-                {
-                    Console.WriteLine("You Lost");
-                    return;
-                }
+
 
                 string message = Deck.CheckIfOptionIsRight(optionType) ? "You Won" : "You Lost";
                 Console.WriteLine(message);

@@ -1,14 +1,15 @@
 namespace Game
 
 {
- enum OptionType{
+    enum OptionType
+    {
 
-High,
+        High,
 
-Low
+        Low,
 
-
- }
+        Equal
+    }
 
 
 
